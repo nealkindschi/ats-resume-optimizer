@@ -16,7 +16,6 @@ import os
 import re
 import sys
 from datetime import datetime
-from collections import Counter
 from typing import Optional
 
 # --- Dependency checks with graceful fallback ---
@@ -428,7 +427,6 @@ def extract_keywords(text: str) -> list[str]:
     extracts them via pattern matching and filters aggressively.
     """
     keywords = set()
-    text_lower = text.lower()
     lines = text.splitlines()
 
     for line in lines:
